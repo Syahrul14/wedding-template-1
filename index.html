@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
   </head>
   <body>
     <main>
       <article id="page-container">
         <section id="cover">
-          <div class="cover-image">
+          <div class="cover-image fade-left">
             <img src="/assets/profile.png" alt="">
           </div>
           <div class="hilight-container">
             <div class="row">
-                <div class="hilight">
+                <div class="hilight fade">
                   <h2 class="title-inivite"><span>Undangan Pernikahan</span></h2>
                   <div class="stackable">
                       <div class="hi-name"><span>Yuan</span></div>
@@ -25,7 +27,7 @@
                     <p>05 ∙ 04 ∙ 2025</p>
                 </div>
             </div>
-            <div class="quote">
+            <div class="quote fade-left">
                 <blockquote>
                     Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.
                 <span class="nowrap">(QS Ar-Ruum:21)</span>
@@ -193,11 +195,41 @@
               <section id="closure" class="show">
                 <div class="closure-container">
                   <h2>See you on our big day</h2>
+                  <div class="stackable">
+                    <div class="hi-name"><span>Yuan</span></div>
+                    <div class="hi-connector">&amp;</div>
+                    <div class="hi-name"><span>Syahrul</span></div>
+                  </div>
                 </div>
               </section>
             </div>
           </div>
         </section>
+        <div class="controller-container">
+          <div class="controller-wrapper">
+            <div id="controller">
+              <nav>
+                <ul id="navigation">
+                  <li>
+                    <a href="#cover" class="active">
+                      <img src="/assets/icon-home.png" alt="">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#cover" class="active">
+                      <img src="/assets/icon-center.png" alt="">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#cover" class="active">
+                      <img src="/assets/icon-calender.png" alt="">
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
       </article>
     </main>
   </body>

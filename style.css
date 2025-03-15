@@ -660,6 +660,7 @@ button:hover {
 #closure {
   display: table;
   width: 100%;
+  height: 100vh;
   padding: 2rem;
   padding-bottom: var(--nav-height);
   background-image: var(--image-background);
@@ -680,7 +681,142 @@ button:hover {
   font-weight: normal;
   transition: 2s var(--transition-ease);
 }
+.closure-container .stackable {
+  perspective: 20rem;
 
+  .hi-name:first-child {
+    margin-top: 2rem;
+    span {
+      position: relative;
+      text-align: right;
+      left: 5rem;
+    }
+  }
+}
+
+.closure-container .stackable {
+  .hi-name:last-child {
+    span {
+      position: relative;
+      text-align: right;
+      right: -8rem;
+    }
+  }
+}
+
+.controller-container {
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 100%;
+
+}
+.controller-wrapper {
+  width: var(--panel-width);
+  max-width: 100%;
+  margin: auto;
+  padding: 1rem;
+}
+
+#controller {
+  display: table;
+  width: 100%;
+  height: 5rem;
+  text-align: center;
+  overflow: hidden;
+  background-color: var(--color-text-secondary);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem -0.8rem rgb(0 0 0 / 0.5);
+  transition: 2s var(--transition-ease);
+  transition-delay: 0.5s;
+}
+
+nav {
+  display: table;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  overflow: auto;
+}
+
+#navigation {
+  display: table;
+  height: 100%;
+  margin: auto;
+  padding: 0.8rem;
+  vertical-align: middle;
+  list-style: none;
+}
+
+ul {
+  display: table-cell;
+  vertical-align: middle;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  width: 3rem;
+}
+
+a {
+  display: flex;
+  padding: 0.7em;
+  border-radius: 1em;
+  align-items: center;
+  justify-content: center;
+  transition: 200ms;
+  outline-width: 0.2em;
+  outline-style: solid;
+  outline-offset: -0.2em;
+  outline-color: transparent;
+
+  img {
+    width: 8vw;
+    max-width: 50px;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+
+
+/* Animasi Fade In-Out */
+.fade {
+  opacity: 0;
+  transform: translateX(100px) scale(0.95); /* dari kanan + sedikit kecil */
+  filter: blur(10px); /* awalnya blur */
+  transition: 
+    opacity 1.5s ease-out, 
+    transform 1.5s cubic-bezier(0.22, 1, 0.36, 1), /* smooth ala puzzle */
+    filter 1.5s ease-out;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateX(0) scale(1); /* ke posisi semula */
+  filter: blur(0); /* hilangin blur */
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-100px) scale(0.95); /* dari kiri */
+  filter: blur(5px);
+  transition: 
+    opacity 1.5s ease-out, 
+    transform 1.5s cubic-bezier(0.22, 1, 0.36, 1), 
+    filter 1.5s ease-out;
+}
+
+.fade-left.show {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  filter: blur(0);
+}
 
 
 
